@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Authros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Birth</th>
+      <th>Address</th>
+      <th>Ctype</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authros.each do |authro| %>
+      <tr>
+        <td><%= authro.user %></td>
+        <td><%= authro.name %></td>
+        <td><%= authro.birth %></td>
+        <td><%= authro.address %></td>
+        <td><%= authro.ctype %></td>
+        <td><%= authro.photo %></td>
+        <td><%= link_to 'Show', authro %></td>
+        <td><%= link_to 'Edit', edit_authro_path(authro) %></td>
+        <td><%= link_to 'Destroy', authro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Authro', new_authro_path %>

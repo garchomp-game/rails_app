@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @authro.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @authro.name %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @authro.birth %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @authro.address %>
+</p>
+
+<p>
+  <strong>Ctype:</strong>
+  <%= @authro.ctype %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @authro.photo %>
+</p>
+
+<%= link_to 'Edit', edit_authro_path(@authro) %> |
+<%= link_to 'Back', authros_path %>
